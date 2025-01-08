@@ -1,0 +1,219 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+header {
+    width: 70%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #0be6f1;
+}
+
+.navbar ul {
+    flex: 1;
+    text-align: right;
+}
+
+.text button {
+    width: 250px;
+    height: 60px;
+    color: black;
+    border: 2px solid #0be6f1;
+    background: transparent;
+    margin-top: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+.text button:hover {
+    background: #0be6f1;
+}
+
+.cercle {
+    position: absolute;
+    top: 10%;
+    right: 30px;
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cercle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+    font-family: "poppins", sans-serif;
+}
+
+.navbar ul li a:hover {
+    color: #0be6f1;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    color: black;
+}
+
+.text h1 {
+    font-size: 60px;
+}
+
+.text span {
+    color: #0be6f1;
+}
+
+.text p {
+    width: 90%;
+    margin-top: 30px;
+}
+
+/* Media Query pour les écrans de téléphones (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Placer le cercle après la navigation */
+    .text, .navbar, .cercle {
+        flex-direction: column; /* Empiler les éléments verticalement */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .navbar ul li {
+        padding: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .text button {
+        width: 220px;
+        font-size: 16px;
+    }
+
+    /* Positionner le cercle en bas */
+    .cercle {
+        position: absolute;
+        bottom: 5%;
+        width: 50%;
+        height: 50%;
+        right: 5%; /* Placer légèrement à droite */
+    }
+
+    .text p {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Media Query pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    /* Placer le cercle après la navigation */
+    .text, .navbar, .cercle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        padding: 8px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text button {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    .cercle {
+        position: absolute;
+        bottom: 5%; /* Positionne le cercle en bas de l'écran */
+        right: 0;
+        width: 60%;
+        height: 60%;
+    }
+
+    .text p {
+        width: 75%;
+        margin-top: 15px;
+    }
+}
